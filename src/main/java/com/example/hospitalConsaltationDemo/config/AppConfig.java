@@ -16,7 +16,7 @@ public class AppConfig {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
 
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-         templateResolver.setPrefix("template/");
+         templateResolver.setPrefix("templates/");
          templateResolver.setSuffix(".html");
          templateResolver.setCharacterEncoding("UTD-8");
 
