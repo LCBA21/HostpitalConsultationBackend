@@ -1,0 +1,37 @@
+package com.example.hospitalConsaltationDemo.consultation.dto;
+
+import com.example.hospitalConsaltationDemo.appointment.dto.AppointmentDTO;
+import com.example.hospitalConsaltationDemo.appointment.entity.Appointment;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ConsultationDTO {
+
+    private Long id;
+
+    private LocalDateTime consultationDate;
+
+    private String subjectiveNotes;
+
+
+    private String objectiveFindings;
+
+    private String assessment;
+
+
+    private String plan;
+
+}
