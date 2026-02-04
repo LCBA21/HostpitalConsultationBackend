@@ -31,7 +31,7 @@ public class SecrurityFilter {
     private final CustomAccessDenialHandler customAccessDenialHandler;
 
     @Bean
-    public SecurityFilterChain secrurityFilter(HttpSecurity httpSecurity) throws Exception {
+    public SecurityFilterChain secrurityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
         httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
